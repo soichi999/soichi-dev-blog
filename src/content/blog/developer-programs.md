@@ -8,13 +8,13 @@ pubDate: 2026-09-26T09:40:00+09:00
 
 ## Apple Developer Program（2026年5月27日）
 
-大学1年の5月に、**Apple Developer Program**に承認されました。
+大学1年の5月に、Apple Developer Programに承認されました。
 
 App Storeでアプリを正式に配信できる開発者として、審査基準を満たしたことになります。これにより、これまでに紹介した『KAMOn』『Negaii』『ねむシープ』『あなたは星です』を、App Storeで公開できるようになりました。
 
 ## Nintendo Developer Portal（2026年8月3日）
 
-大学1年の8月には、**Nintendo Developer Portal**への登録が承認されました。
+大学1年の8月には、Nintendo Developer Portalへの登録が承認されました。
 
 Nintendo Switch向けタイトルの開発に必要な、任天堂公式の開発者向けポータルサイトです。個人開発者として、Switch向けの開発に着手できる環境が整いました。
 

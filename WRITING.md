@@ -36,7 +36,7 @@ http://localhost:4321/blog/ を開くと、保存するたびに画面が更新�
 ## 4. 公開
 
 ```sh
-npm run publish -- "記事「〇〇」を追加"
+npm run release -- "記事「〇〇」を追加"
 ```
 
 ビルド確認 → commit → push まで行い、1〜2分でブログに反映されます。
@@ -45,4 +45,4 @@ npm run publish -- "記事「〇〇」を追加"
 ## 下書き
 
 ひな形には `draft: true` が入っていて、この間はサイトに出ません(`npm run dev` のプレビューでは見えます)。
-公開したくなったら、その行を消して `npm run publish` します。
+公開したくなったら、その行を消して `npm run release` します。

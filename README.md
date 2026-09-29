@@ -8,4 +8,4 @@ Astro製。`main` に push すると Cloudflare Workers で https://blog.soichi.
 |---|---|
 | `npm run new -- URL名` | 記事のひな形を作る |
 | `npm run dev` | http://localhost:4321 でプレビュー |
-| `npm run publish -- "メッセージ"` | ビルド確認 → commit → push |
+| `npm run release -- "メッセージ"` | ビルド確認 → commit → push |

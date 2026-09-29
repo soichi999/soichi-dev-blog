@@ -1,5 +1,5 @@
 #!/bin/sh
-# 記事を公開する。使い方: npm run publish -- "コミットメッセージ"
+# 記事を公開する。使い方: npm run release -- "コミットメッセージ"
 set -e
 msg="${1:-記事を更新}"
 npm run build >/dev/null

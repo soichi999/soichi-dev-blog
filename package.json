@@ -9,6 +9,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "new": "node scripts/new-post.mjs",
+    "publish": "sh scripts/publish.sh",
     "astro": "astro"
   },
   "dependencies": {

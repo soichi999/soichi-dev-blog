@@ -1,14 +1,8 @@
 ---
-import { getCollection } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-import PostCard from '../components/PostCard.astro';
 import { SITE_DESCRIPTION, SITE_TITLE, TOP_URL } from '../consts';
-
-const latest = (await getCollection('blog'))
-	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-	.slice(0, 3);
 ---
 
 <!doctype html>
@@ -29,19 +23,6 @@ const latest = (await getCollection('blog'))
 					<a class="btn btn-primary" href="/blog/">記事を読む</a>
 					<a class="btn btn-outline" href={TOP_URL}>プロフィールサイト</a>
 				</div>
-			</section>
-
-			<section class="latest">
-				<h2>最新の記事</h2>
-				<ul>
-					{
-						latest.map((post) => (
-							<li>
-								<PostCard post={post} />
-							</li>
-						))
-					}
-				</ul>
 			</section>
 		</main>
 		<Footer />
@@ -106,27 +87,6 @@ const latest = (await getCollection('blog'))
 		color: var(--text-h);
 		transform: translateY(-1px);
 	}
-	.latest {
-		padding-top: 48px;
-	}
-	.latest h2 {
-		margin: 0 0 28px;
-		padding: 0;
-		border: none;
-		font-size: 1.3rem;
-	}
-	.latest ul {
-		display: flex;
-		flex-direction: column;
-		gap: 28px;
-		margin: 0;
-		padding: 0 6px 0 0;
-		list-style: none;
-	}
-	.latest li {
-		margin: 0;
-	}
-
 	@media (max-width: 720px) {
 		.hero {
 			padding-bottom: 40px;

@@ -1,16 +1,21 @@
 ---
 title: '【Unity技術メモ】壁まで滑るスリップ移動をRaycastで作る'
-description: '2Dパズルで使う「壁に当たるまで滑り続ける移動」の実装方法と、Raycastまわりでハマった落とし穴のメモ。'
-pubDate: 2026-09-24T10:00:00+09:00
-qiita: [Unity, C#, Unity2D, ゲーム開発]
+tags:
+  - 'Unity'
+  - 'C#'
+  - 'Unity2D'
+  - 'ゲーム開発'
+private: false
+updated_at: ''
+id: null
+organization_url_name: null
+slide: false
+ignorePublish: false
 ---
-
-import TeruruTalk from "../../components/TeruruTalk.astro";
-
 
 開発中のパズルゲーム『イロメガネ』では、キャラクターが壁に当たるまで一方向へ滑り続ける移動を使っています。この記事では、その実装方針と、作っていて実際にハマったポイントをメモしておきます。
 
-<TeruruTalk text="一度動き出すと、壁に当たるまで止まれないよ。今回は、その動きの作り方を紹介するね。" />
+> てるる「一度動き出すと、壁に当たるまで止まれないよ。今回は、その動きの作り方を紹介するね。」
 
 ## 方針: 物理エンジンに任せず、Raycastで止める位置を決める
 
@@ -79,7 +84,7 @@ public class SlideMover : MonoBehaviour
 
 ポイントは、停止位置を `origin + 方向 * (hit.distance - 半径)` で求めているところです。`hit.distance` は「Rayの開始点から壁の面まで」の距離なので、そこから体の半径を引けば、体の縁がちょうど壁に接する中心座標になります。
 
-<TeruruTalk text="壁の手前でぴたっと止まるには、ぼくの体の大きさも計算に入れるんだね。" />
+> てるる「壁の手前でぴたっと止まるには、ぼくの体の大きさも計算に入れるんだね。」
 
 ## ハマった落とし穴
 
@@ -109,3 +114,7 @@ Unityでは、Rayの開始点がすでにコライダーの内側にあると、
 - 複数本のRayを使うときは、`hit.point` ではなく中心 + 方向 × 距離で位置を求める
 - コライダー内側からのRayは `distance = 0` になる。「壁の中か」を知りたいなら `OverlapPoint` を使う
 - `RaycastAll` の順序は当てにしない
+
+---
+
+この記事は [個人ブログ](https://blog.soichi.dev/blog/unity-slide-movement-raycast/) にも掲載しています。

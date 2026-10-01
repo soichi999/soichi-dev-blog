@@ -62,3 +62,32 @@ import TeruruTalk from "../../components/TeruruTalk.astro";
 ```
 
 吹き出しは1記事に1〜2か所を目安にします。画像は `public/images/teruru-02.png` を使います。
+
+## Qiita にも投稿する(技術記事だけ)
+
+Qiita に出したい記事は、frontmatter に `qiita:` でタグを足します(1〜5個)。
+
+```yaml
+qiita: [Unity, C#, ゲーム開発]
+```
+
+**初回だけ**: Qiita のアクセストークン(Qiita の設定 → アプリケーション → 個人用アクセストークン、
+`read_qiita` と `write_qiita` にチェック)を発行し、次を実行してトークンを貼ります。
+トークンはチャットなどには貼らず、このコマンドの入力欄にだけ入力してください。
+`qiita/.credential` に保存され、git には入りません。
+
+```sh
+npm run qiita:login
+```
+
+**投稿**: 次のコマンドで、`qiita:` が付いた記事を Qiita 用に変換して投稿します。
+
+```sh
+npm run qiita:publish
+```
+
+- ブログの記事が元です。Qiita 側の記事の末尾に「個人ブログにも掲載しています」とリンクが入ります。
+- 一度投稿した記事は `qiita/public/` に id が記録され、再実行すると更新になります。
+  投稿後は `npm run release` で `qiita/` の変更もコミットしてください。
+- 確認だけしたいときは `npm run qiita:preview`。
+- 下書き(`draft: true`)の記事は対象になりません。

@@ -15,6 +15,8 @@ const blog = defineCollection({
 			updatedDate: z.coerce.date().optional(),
 			// true の記事はサイトに出ない(下書き)
 			draft: z.boolean().optional(),
+			// Qiitaにも投稿する記事に付けるタグ(npm run qiita:publish)
+			qiita: z.array(z.string()).optional(),
 			heroImage: z.optional(image()),
 		}),
 });

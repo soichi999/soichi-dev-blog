@@ -10,6 +10,10 @@
     "build": "astro build",
     "preview": "astro preview",
     "new": "node scripts/new-post.mjs",
+    "qiita:sync": "node scripts/qiita-sync.mjs",
+    "qiita:login": "qiita login --credential qiita/.credential",
+    "qiita:preview": "node scripts/qiita-sync.mjs && qiita preview --root qiita --credential qiita/.credential",
+    "qiita:publish": "node scripts/qiita-sync.mjs && qiita publish --all --root qiita --credential qiita/.credential",
     "release": "sh scripts/publish.sh",
     "astro": "astro"
   },
@@ -24,6 +28,7 @@
     "esbuild": true
   },
   "devDependencies": {
+    "@qiita/qiita-cli": "^1.10.0",
     "wrangler": "^4.136.2"
   }
 }

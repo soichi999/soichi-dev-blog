@@ -1,0 +1,26 @@
+---
+interface Props { text: string }
+const { text } = Astro.props;
+---
+<aside class="teruru-talk" aria-label="てるるのひとこと">
+  <div class="teruru-portrait">
+    <img src="/images/teruru-02.png" alt="てるてるメガネのキャラクター、てるる" width="1300" height="1300" loading="lazy" />
+  </div>
+  <div class="teruru-bubble"><span class="teruru-name">てるる</span><p>{text}</p></div>
+</aside>
+<style>
+.teruru-talk { display: flex; align-items: center; gap: 22px; margin: 32px 0; }
+.teruru-portrait { flex: 0 0 112px; height: 126px; position: relative; overflow: hidden; }
+.teruru-portrait img { position: absolute; width: 200px; max-width: none; height: 200px; left: -55px; top: -45px; border-radius: 0; }
+.teruru-bubble { position: relative; flex: 1; min-width: 0; padding: 18px 22px; border: 1px solid #e5c7cf; border-radius: 20px; background: #fff7f9; }
+.teruru-bubble::before { content: ''; position: absolute; left: -9px; top: 50%; width: 16px; height: 16px; background: #fff7f9; border-left: 1px solid #e5c7cf; border-bottom: 1px solid #e5c7cf; transform: translateY(-50%) rotate(45deg); }
+.teruru-name { display: block; font-size: 12px; color: var(--accent-dark); margin-bottom: 5px; }
+.teruru-bubble p { margin: 0; color: var(--text-h); font-size: 15px; line-height: 1.9; }
+@media (max-width: 480px) {
+ .teruru-talk { gap: 14px; }
+ .teruru-portrait { flex-basis: 76px; height: 92px; }
+ .teruru-portrait img { width: 135px; height: 135px; left: -38px; top: -31px; }
+ .teruru-bubble { padding: 14px 16px; }
+ .teruru-bubble p { font-size: 14px; }
+}
+</style>

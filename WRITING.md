@@ -46,3 +46,19 @@ npm run release -- "記事「〇〇」を追加"
 
 ひな形には `draft: true` が入っていて、この間はサイトに出ません(`npm run dev` のプレビューでは見えます)。
 公開したくなったら、その行を消して `npm run release` します。
+
+## てるてるメガネの記事
+
+てるてるメガネの記事では、てるるの画像と吹き出しを使えます。記事は `.mdx` で作成し、先頭の frontmatter の後に次を置きます。
+
+```jsx
+import TeruruTalk from "../../components/TeruruTalk.astro";
+```
+
+本文の区切りに、記事の内容に合った短いひとことを入れます。
+
+```jsx
+<TeruruTalk text="ぼくは、てるる！ 色メガネで壁を消しながら、塔を登っていくよ。" />
+```
+
+吹き出しは1記事に1〜2か所を目安にします。画像は `public/images/teruru-02.png` を使います。

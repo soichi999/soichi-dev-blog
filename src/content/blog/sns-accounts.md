@@ -1,6 +1,6 @@
 ---
-title: '【活動紹介】YouTube・Instagram・X・TikTok。制作物を発信しているSNS'
-description: '自作曲や自作アプリなどの制作物を発信している、YouTube・Instagram・X・TikTokの4つのアカウントの紹介です。'
+title: '【個人開発者のSNS運用】YouTube・Instagram・X・TikTokで制作物を発信'
+description: '個人開発者が自作曲やアプリなどの制作物を発信している、YouTube・Instagram・X・TikTokの4アカウントの役割と運用の紹介です。'
 pubDate: 2026-10-08T09:40:00+09:00
 ---
 

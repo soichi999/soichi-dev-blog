@@ -1,6 +1,6 @@
 ---
-title: 'Apple Developer ProgramとNintendo Developer Portalに承認されました'
-description: 'iOSアプリの配信とNintendo Switch向けの開発、2つの開発者プログラムに承認されたことのご報告です。'
+title: 'Apple Developer ProgramとNintendo Developer Portalに個人で承認された話'
+description: '個人開発者がApple Developer Program(iOSアプリ配信)とNintendo Developer Portal(Nintendo Switch向け開発)に承認されたことのご報告です。'
 pubDate: 2026-09-26T09:40:00+09:00
 ---
 

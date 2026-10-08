@@ -1,6 +1,6 @@
 ---
-title: '【作品紹介】寮の笹と短冊から生まれた、短冊を共有できるSNS『Negaii』'
-description: '寮のホワイトボードに書いた笹と短冊がきっかけで作った、七夕にちなんだ短冊共有SNSアプリ『Negaii』の紹介です。'
+title: '『Negaii』短冊を共有できる七夕SNSアプリ｜iPhone個人開発'
+description: '七夕にちなんだ、短冊を共有できるSNSアプリ『Negaii』。寮のホワイトボードに書いた笹と短冊がきっかけで生まれた、App Store配信のiPhoneアプリの紹介です。'
 pubDate: 2026-09-26T09:10:00+09:00
 ---
 

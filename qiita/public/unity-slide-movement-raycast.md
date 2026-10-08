@@ -1,5 +1,5 @@
 ---
-title: '【Unity技術メモ】壁まで滑るスリップ移動をRaycastで作る'
+title: '【Unity】壁まで滑るスリップ移動をRaycastで実装する方法｜2Dパズル'
 tags:
   - 'Unity'
   - 'C#'
